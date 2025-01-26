@@ -1,0 +1,372 @@
+/* Globals */
+
+html {
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(248, 248, 248);
+    padding-top: 100px;
+}
+
+h1 {
+    line-height: 1.1em;
+    font-size: 3em;
+    font-weight: bolder;
+    color: rgb(34, 34, 34);
+    margin: 0px 0px;
+}
+
+h2 {
+    line-height: 1.1em;
+    font-size: 2em;
+    font-weight: bolder;
+    color: rgb(34, 34, 34);
+    margin: 0px 0px;
+}
+
+h3 {
+    font-size: 1.3em;
+    font-weight: bolder;
+    color: rgb(34, 34, 34);
+    margin: 0px 0px;
+}
+
+h4 {
+    font-size: 1.1em;
+    font-weight: bolder;
+    color: rgb(34, 34, 34);
+    margin: 0px 0px;
+}
+
+p {
+    font-size: 1.15em;
+    color: rgb(34, 34, 34);
+    margin: 10px 0px 15px 0px;
+}
+
+q {
+    font-style: italic;
+    display: block;
+    font-size: 1.15em;
+    color: rgb(34, 34, 34);
+    margin: 10px 0px 15px 0px;
+}
+
+a {
+    font-size: 0.9em;
+    color: rgb(95, 95, 95);
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    overflow: auto;
+    padding-bottom: 25px;
+    margin-top: 30px;
+    box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.08);
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+footer ul {
+    padding: 0px;
+    margin: 15px 0px;
+    list-style-type: none;
+    text-align: center;
+}
+
+footer li {
+    padding: 2px 0px;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer img {
+    width: 30px;
+    height: 30px;
+}
+
+
+/* Buttons */
+
+.TextButton,
+.ColoredTextButton,
+.IconButton,
+.ColoredIconButton,
+.PurchaseButton {
+    background-color: rgb(245, 245, 245);
+    color: rgb(51, 51, 51);
+    border: none;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: 0.2s;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.ColoredTextButton,
+.ColoredIconButton {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    background-color: rgb(255, 77, 67);
+}
+
+.PurchaseButton {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    background-color: #20a747;
+    display: inline-block;
+}
+
+.TextButton:hover,
+.ColoredTextButton:hover,
+.IconButton:hover,
+.ColoredIconButton:hover,
+.PurchaseButton:hover {
+    filter: brightness(96%);
+    box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, 0.03);
+}
+
+.IconButton,
+.ColoredIconButton {
+    padding: 10px 10px;
+    margin: 0px 0px;
+}
+
+.IconButton img,
+.ColoredIconButton img {
+    width: 70%;
+}
+
+.IconButton img {
+    filter: invert(30%);
+}
+
+
+/* Section */
+
+section {
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.2);
+    background-color: rgb(255, 255, 255);
+    margin: 25px 6%;
+    padding: 20px 7%;
+    overflow: auto;
+    box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+}
+
+section.LeftImage img {
+    float: left;
+    border-radius: 7px;
+    margin-right: 20%;
+    width: 30%;
+}
+
+section.LeftImage a {
+    display: block;
+    float: right;
+}
+
+section.LeftImage h1,
+section.LeftImage h2,
+section.LeftImage h3,
+section.LeftImage h4,
+section.LeftImage q,
+section.LeftImage p {
+    text-align: right;
+}
+
+section.RightImage img {
+    float: right;
+    border-radius: 7px;
+    margin-left: 20%;
+    width: 30%;
+}
+
+section.RightImage div {
+    float: none;
+}
+
+section.RightImage a {
+    display: block;
+    float: left;
+}
+
+section.RightImage h1,
+section.RightImage h2,
+section.RightImage h3,
+section.RightImage h4,
+section.RightImage q,
+section.RightImage p {
+    text-align: left;
+}
+
+div.Showcase {
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.2);
+    background-color: rgb(255, 255, 255);
+    margin: 7px 7px;
+    padding: 20px 7%;
+    overflow: auto;
+    box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.08);
+}
+
+div.Showcase img {
+    width: auto;
+    height: 250px;
+    display: block;
+    margin: 0 auto;
+}
+
+div.Title h1,
+div.Title h2,
+div.Title h3,
+div.Title h4 {
+    text-align: center;
+}
+
+div.Title {
+    margin: 20px 0px;
+}
+
+div.Thumbnail {
+    height: 200px;
+    overflow: hidden;
+}
+
+div.Thumbnail img {
+    height: auto;
+    width: 100%;
+}
+
+div.GridContainer {
+    margin: 25px 6%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+
+/* NavigationBar */
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    background: rgb(255, 255, 255);
+    align-items: center;
+    padding: 10px 0px;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.08);
+}
+
+nav ul {
+    padding: 0px;
+}
+
+nav li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0px 5px;
+}
+
+nav ul li:last-child {
+    margin-right: 15px;
+}
+
+#Logo {
+    margin-left: 15px;
+    display: block;
+    border-radius: 5px;
+    transition: 0.1s;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+
+#Logo img {
+    height: 40px;
+}
+
+#Logo:hover {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: rgba(241, 241, 241, 0.7);
+    box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, 0.03);
+}
+
+
+/* Mobile First */
+
+.Mobile {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .notMobile {
+        padding: 0px;
+        margin: 0px;
+        display: none;
+    }
+    .Mobile {
+        display: inline-block;
+    }
+    body {
+        padding-top: 130px;
+        font-size: 0.8em;
+    }
+    footer {
+        margin-top: 25px;
+    }
+    nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    nav ul {
+        margin: 5px 0px 0px 0px;
+    }
+    section {
+        flex-direction: column;
+    }
+    section img {
+        margin: 0px;
+    }
+    section h1 {
+        text-align: center;
+    }
+    section p {
+        text-align: center;
+    }
+    section a {
+        float: none;
+    }
+    #Logo {
+        padding: 0px;
+    }
+    nav li {
+        margin: 0px 0px;
+    }
+    nav ul li:last-child {
+        margin-right: 0px;
+    }
+    div.GridContainer {
+        display: block;
+    }
+}

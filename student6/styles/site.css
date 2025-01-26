@@ -1,0 +1,692 @@
+/* Globals */
+
+:root {
+    /*Rounded boxes style*/
+    --style_border-radius: 10px;
+    --style_border-width: 1px;
+    --style_border-style: solid;
+    --style_border-color: rgba(0, 0, 0, 0.2);
+    --style_background-color: rgb(255, 255, 255);
+}
+
+html {
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(248, 248, 248);
+    padding-top: 130px;
+    font-size: 0.8em;
+}
+
+h1 {
+    line-height: 1.1em;
+    font-size: 3em;
+    font-weight: bolder;
+    color: rgb(34, 34, 34);
+    margin: 0px 0px;
+}
+
+h2 {
+    line-height: 1.1em;
+    font-size: 2em;
+    font-weight: bolder;
+    color: rgb(34, 34, 34);
+    margin: 0px 0px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    font-size: 0.9em;
+    color: rgba(0, 0, 0, 0.2)
+}
+
+textarea {
+    resize: none;
+    padding: 8px;
+    color: rgba(0, 0, 0, 1);
+    font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+input {
+    padding: 0.9em;
+    width: calc(100% - 30px);
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+}
+
+fieldset input {
+    width: auto;
+}
+
+h3 {
+    font-size: 1.3em;
+    font-weight: bolder;
+    color: rgb(34, 34, 34);
+    margin: 0px 0px;
+}
+
+h4,
+label,
+legend,
+th {
+    font-size: 1.1em;
+    font-weight: bolder;
+    color: rgb(34, 34, 34);
+    margin: 0px 0px;
+}
+
+p,
+td {
+    font-size: 1.15em;
+    color: rgb(34, 34, 34);
+    margin: 10px 0px 15px 0px;
+}
+
+q {
+    font-style: italic;
+    display: block;
+    font-size: 1.25em;
+    color: rgb(34, 34, 34);
+    margin: 10px 0px 15px 0px;
+}
+
+input,
+fieldset,
+textarea,
+select {
+    line-height: 1.5em;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.clip-star {
+    background: gold;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+}
+
+a {
+    color: rgb(95, 95, 95);
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--style_background-color);
+    overflow: auto;
+    padding-bottom: 25px;
+    margin-top: 25px;
+    box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.08);
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+footer ul {
+    padding: 0px;
+    margin: 15px 0px;
+    list-style-type: none;
+    text-align: center;
+}
+
+footer li {
+    padding: 2px 0px;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer p {
+    font-size: 0.9em;
+}
+
+footer img {
+    width: 30px;
+    height: 30px;
+}
+
+
+/* Buttons */
+
+input[type=submit] {
+    width: 10%;
+}
+
+.TextButton,
+input[type=submit],
+.ColoredTextButton,
+.IconButton,
+.ColoredIconButton,
+.PurchaseButton {
+    background-color: rgb(245, 245, 245);
+    color: rgb(51, 51, 51);
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: 0.2s;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.ColoredTextButton,
+.ColoredIconButton {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    background-color: rgb(255, 77, 67);
+}
+
+.PurchaseButton {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    background-color: #20a747;
+    display: inline-block;
+}
+
+.IconButton,
+.ColoredIconButton {
+    padding: 10px 10px;
+    margin: 0px 0px;
+}
+
+.IconButton img,
+.ColoredIconButton img {
+    width: 70%;
+}
+
+
+/*https://css-tricks.com/snippets/css/give-clickable-elements-a-pointer-cursor/*/
+
+.IconButton img {
+    filter: invert(30%);
+}
+
+a[href],
+input[type='submit'],
+input[type='image'],
+label[for],
+select,
+button,
+.pointer {
+    cursor: pointer;
+}
+
+
+/* Section */
+
+section {
+    border-radius: var(--style_border-radius);
+    border-width: var(--style_border-width);
+    border-style: var(--style_border-style);
+    border-color: var(--style_border-color);
+    background-color: var(--style_background-color);
+    margin: 25px 6%;
+    padding: 20px 7%;
+    overflow: auto;
+    box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.gmap_canvas {
+    border-radius: var(--style_border-radius);
+    border-width: var(--style_border-width);
+    border-style: var(--style_border-style);
+    border-color: var(--style_border-color);
+    background-color: var(--style_background-color);
+    margin: 25px 6%;
+    overflow: auto;
+    box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+table {
+    border-radius: 5px;
+    border-width: var(--style_border-width);
+    border-style: var(--style_border-style);
+    border-color: rgba(0, 0, 0, 0.12);
+    background-color: var(--style_background-color);
+    padding: 0px;
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.05);
+}
+
+.ShowcaseCenter table {
+    margin: auto;
+}
+
+table th {
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.04);
+    padding: 5px;
+}
+
+table td {
+    border-bottom: solid 1px rgba(0, 0, 0, 0.08);
+}
+
+section img {
+    margin: 0px;
+}
+
+section h1 {
+    text-align: center;
+}
+
+section p {
+    text-align: center;
+}
+
+section a {
+    float: none;
+}
+
+section.LeftImage {
+    justify-content: space-between
+}
+
+section.LeftImage img {
+    float: left;
+    border-radius: 7px;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    width: 55%;
+}
+
+section.LeftImage a {
+    display: block;
+    float: none;
+}
+
+section.LeftImage h1,
+section.LeftImage h2,
+section.LeftImage h3,
+section.LeftImage h4,
+section.LeftImage q,
+section.LeftImage p {
+    text-align: center;
+}
+
+section.RightImage {
+    justify-content: space-between
+}
+
+section.RightImage img {
+    float: right;
+    border-radius: 7px;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    width: 55%;
+}
+
+section.RightImage div {
+    float: none;
+}
+
+section.RightImage a {
+    display: block;
+    float: none;
+}
+
+section.RightImage h1,
+section.RightImage h2,
+section.RightImage h3,
+section.RightImage h4,
+section.RightImage q,
+section.RightImage p {
+    text-align: center;
+}
+
+div.Showcase {
+    border-radius: var(--style_border-radius);
+    border-width: var(--style_border-width);
+    border-style: var(--style_border-style);
+    border-color: var(--style_border-color);
+    background-color: var(--style_background-color);
+    margin: 7px 7px;
+    padding: 20px 7%;
+    overflow: auto;
+    box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.08);
+}
+
+div.ShowcaseCenter {
+    border-radius: var(--style_border-radius);
+    border-width: var(--style_border-width);
+    border-style: var(--style_border-style);
+    border-color: var(--style_border-color);
+    background-color: var(--style_background-color);
+    margin: 25px 6%;
+    padding: 20px 7%;
+    overflow: auto;
+    box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+div.ShowcaseCenter video {
+    border-radius: var(--style_border-radius);
+    border-width: var(--style_border-width);
+    border-style: var(--style_border-style);
+    border-color: var(--style_border-color);
+    background-color: var(--style_background-color);
+    box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.08);
+}
+
+div.ShowcaseList {
+    border-radius: var(--style_border-radius);
+    border-width: var(--style_border-width);
+    border-style: var(--style_border-style);
+    border-color: var(--style_border-color);
+    background-color: var(--style_background-color);
+    margin: 25px 6%;
+    padding: 20px 7%;
+    overflow: auto;
+    box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+div.ShowcaseList ul {
+    list-style-image: url('/images/SmallIcon.png');
+}
+
+div.ShowcaseList li {
+    text-align: left;
+}
+
+div.ShowcaseList li a {
+    text-align: left;
+    margin-bottom: 16px;
+}
+
+div.Showcase img {
+    width: auto;
+    height: 250px;
+    display: block;
+    margin: 0 auto;
+}
+
+div.Title h1,
+div.Title h2,
+div.Title h3,
+div.Title h4 {
+    text-align: center;
+}
+
+div.Title {
+    margin: 20px 0px;
+}
+
+div.Thumbnail {
+    height: 200px;
+    overflow: hidden;
+}
+
+div.Thumbnail img {
+    height: auto;
+    width: 100%;
+}
+
+div.GridContainer {
+    margin: 25px 5.5%;
+    display: block;
+    grid-template-columns: auto auto auto;
+}
+
+div.SingleGridContainer {
+    margin: 25px 5.5%;
+    display: block;
+    grid-template-columns: auto;
+}
+
+.neonText {
+    font-family: 'Bodoni MT';
+    font-weight: bolder;
+    color: #FFFFFF;
+    text-shadow: 0 0 3px #106300, 0 0 4px #FFF, 0 0 8px #63ff38, 0 0 16px #49FF18, 0 0 31px #49ff18;
+}
+
+.neonText::first-letter {
+    font-family: 'Brush Script MT';
+    font-weight: bolder;
+    font-size: 3.5rem;
+    line-height: 1;
+}
+
+section.Smaller img {
+    filter: brightness(0.8);
+    width: 10%;
+}
+
+section.Smaller {
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+}
+
+
+/* NavigationBar */
+
+nav {
+    z-index: 9999999;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    background: rgb(255, 255, 255);
+    align-items: center;
+    padding: 10px 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.08);
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+nav ul {
+    margin: 5px 0px 0px 0px;
+    padding: 0px;
+}
+
+nav li {
+    margin: 0px 0px;
+    list-style-type: none;
+    display: inline-block;
+}
+
+nav ul li:last-child {
+    margin-right: 0px;
+}
+
+#Logo {
+    margin-left: 15px;
+    display: block;
+    border-radius: 5px;
+    transition: 0.1s;
+    padding: 0px;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#Logo img {
+    height: 40px;
+}
+
+iframe {
+    width: 100%;
+    border: none;
+}
+
+video {
+    margin: auto;
+    width: 80%;
+}
+
+.Validation {
+    display: flex;
+}
+
+.Validation p {
+    padding: 0px 5px;
+}
+
+.Mobile {
+    display: inline-block !important;
+}
+
+.MobileFlex {
+    display: flex !important;
+}
+
+.notMobile {
+    display: none !important;
+}
+
+.notMobileFlex {
+    display: none !important;
+}
+
+.notMobileBlock {
+    display: none !important;
+}
+
+@media all and (min-width: 768px) {
+    /* PC */
+    .Mobile {
+        display: none !important;
+    }
+    .MobileFlex {
+        display: none !important;
+    }
+    .notMobile {
+        display: inline-block !important;
+    }
+    .notMobileFlex {
+        display: flex !important;
+    }
+    .notMobileBlock {
+        display: block !important;
+    }
+    .TextButton:hover,
+    input[type=submit]:hover,
+    .ColoredTextButton:hover,
+    .IconButton:hover,
+    .ColoredIconButton:hover,
+    .PurchaseButton:hover {
+        filter: brightness(96%);
+        box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, 0.03);
+    }
+    #Logo:hover {
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        background-color: rgba(241, 241, 241, 0.7);
+        box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, 0.03);
+    }
+    body {
+        padding-top: 100px;
+    }
+    footer {
+        margin-top: 30px;
+    }
+    nav {
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+    nav ul {
+        margin: 0px 0px 0px 0px;
+    }
+    section {
+        flex-direction: row;
+    }
+    section img {
+        margin: 0;
+    }
+    section h1 {
+        text-align: left;
+    }
+    section p {
+        text-align: left;
+    }
+    section a {
+        float: none;
+    }
+    #Logo {
+        padding: 10px 20px;
+    }
+    nav li {
+        margin: 0px 2px;
+    }
+    nav ul li:last-child {
+        margin-right: 15px;
+    }
+    section.LeftImage img {
+        margin-right: 20%;
+        width: 30%;
+        margin-left: 0%;
+        margin-bottom: 0%;
+    }
+    section.LeftImage h1,
+    section.LeftImage h2,
+    section.LeftImage h3,
+    section.LeftImage h4,
+    section.LeftImage q,
+    section.LeftImage p {
+        text-align: right;
+    }
+    section.LeftImage a {
+        float: right;
+    }
+    section.RightImage img {
+        float: right;
+        border-radius: 7px;
+        margin-left: 20%;
+        margin-right: 0%;
+        margin-bottom: 0%;
+        width: 30%;
+    }
+    section.RightImage h1,
+    section.RightImage h2,
+    section.RightImage h3,
+    section.RightImage h4,
+    section.RightImage q,
+    section.RightImage p {
+        text-align: left;
+    }
+    section.RightImage a {
+        float: left;
+    }
+    section.RightImage {
+        flex-direction: row-reverse;
+    }
+    section.Smaller img {
+        width: 10%;
+    }
+    table {
+        padding: 7px;
+    }
+    table th {
+        padding: 5px 15px;
+    }
+    div.GridContainer {
+        display: grid;
+    }
+}
